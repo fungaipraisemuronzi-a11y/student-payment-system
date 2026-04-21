@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Period</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h2>Create Period</h2>
+
+<form method="POST" action="/add-period">
+    <input type="text" name="name" placeholder="Period Name" required>
+    <br><br>
+
+    <input type="number" step="0.01" name="target" placeholder="Target Amount">
+    <br><br>
+
+    <button type="submit">Create</button>
+</form>
+
+<br>
+<a href="/home">Back Home</a>
+
+</body>
+</html>

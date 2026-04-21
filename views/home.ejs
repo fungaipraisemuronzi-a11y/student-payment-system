@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/style.css">
+<title>Home</title>
+</head>
+<body>
+
+<div class="container">
+
+<div class="card">
+    <h2>Master's Students Board</h2>
+
+    <a href="/add-student">➕ Add Student</a><br><br>
+    <a href="/add-period">📅 Create Period</a><br>
+</div>
+<br>
+<div class="card">
+    <h3>Periods</h3>
+
+    <% periods.forEach(period => { %>
+        <div class="card">
+            <a href="/period/<%= period.id %>">
+                <strong><%= period.name %></strong>
+                --------
+                Target: $<%= period.target_amount %>
+            </a>
+        </div>
+    <% }) %>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students With Credit</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="container">
+<h2>Students With Credit</h2>
+
+<div class="card">
+<ol>
+<%
+students.forEach(student => {
+    let total = 0;
+
+    payments.forEach(p => {
+        if (p.student_id === student.id) {
+            total = Number(p.total || 0);
+        }
+    });
+
+    const target = Number(period.target_amount || 0);
+%>
+
+<% if (total < target) { %>
+    <li>
+        <%= student.name %> has paid--- $<%= total %> and owes--- $<%= (target - total).toFixed(2) %>
+    </li>
+<% } %>
+
+<% }) %>
+</ol>
+   
+
+<a href="/period/<%= period.id %>">Back</a></div></div> 
+
+</body>
+</html>

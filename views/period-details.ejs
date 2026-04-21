@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Period Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+<h2><%= period.name %></h2>
+<div class="card">
+<form method="POST" action="/update-target">
+    <input type="hidden" name="period_id" value="<%= period.id %>">
+    Target:
+    <input type="number" step="0.01" name="target" value="<%= period.target_amount %>">
+    <button type="submit">Update Target</button>
+</form>
+
+
+<br>
+
+<a href="/credit/<%= period.id %>">Students with Credit</a> <br><br>
+<a href="/advance/<%= period.id %>">Students Paid in Advance</a>
+
+<hr>
+</div>  
+
+<div class="card">
+<h2>Students</h2>
+
+<ol>
+<% students.forEach(student => { 
+    let total = 0;
+    payments.forEach(p => {
+        if(p.student_id === student.id){
+            total = p.total;
+        }
+    });
+%>
+
+<li>
+    <strong><%= student.name %></strong>
+    - Total: <%= total || 0 %>
+
+    <form method="POST" action="/add-payment" style="display:inline;">
+        <input type="hidden" name="student_id" value="<%= student.id %>">
+        <input type="hidden" name="period_id" value="<%= period.id %>">
+        <input type="number" step="0.01" name="amount" placeholder="Add payment" required>
+        <button>Add</button>
+    </form>
+<br>
+    <a href="/student/<%= student.id %>/<%= period.id %>">
+        View Payment Details
+    </a>
+
+</li>
+
+<% }) %>
+</ol>
+ 
+<br>
+<a href="/home">Back Home</a></div>
+</div> 
+
+</body>
+</html>

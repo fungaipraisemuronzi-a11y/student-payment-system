@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+<h2>Add Student</h2>
+<div class="card">
+<form method="POST" action="/add-student">
+    <input type="text" name="name" placeholder="Student name" required>
+    <button type="submit">Add</button>
+</form>
+</div>
+<br><br>
+
+<div class="card">
+<h2>Total Students: <%= students.length %></h2>
+
+<ol>
+    <% students.forEach(student => { %>
+        <li>
+            <%= student.name %>  -----
+            <a class="a" href="/delete-student/<%= student.id %>">Delete</a><br>
+        </li>
+    <% }) %>
+</ol>
+
+<br>
+<a href="/home">Back Home</a></div>
+</div>
+
+</body>
+</html>

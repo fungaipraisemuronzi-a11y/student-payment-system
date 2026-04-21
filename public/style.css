@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 5px;
+    background: #d0ddf0;
+}
+#h1 {
+    text-align: center;
+    font-size: 60px;
+}
+/* HEADER / TITLE */
+h2 {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+}
+
+/* CONTAINER */
+.container {
+    width: 95%;
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a.a {
+    margin-left: 10px;
+    color: red;
+}
+li {
+    margin: 11px 0;
+}
+
+/* BUTTON */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 130px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* INPUTS */
+input {
+    padding: 8px;
+    width: 50%;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* CARD STYLE */
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px ;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    
+}
+
+/* TABLE (MOBILE FRIENDLY) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}

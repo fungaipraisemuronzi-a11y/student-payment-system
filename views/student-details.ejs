@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+<h2><%= student.name %> Payments</h2>
+
+<div class="card">
+<table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Update</th>
+    </tr>
+
+    <% payments.forEach(payment => { %>
+    <tr>
+        <td>
+           <%= new Date(payment.created_at).toLocaleDateString() %>
+        </td>
+
+        <td>
+            <form method="POST" action="/update-payment">
+                <input type="hidden" name="payment_id" value="<%= payment.id %>">
+                <input type="hidden" name="student_id" value="<%= student.id %>">
+                <input type="hidden" name="period_id" value="<%= periodId %>">
+
+                <input 
+                    type="number" 
+                    step="0.01" 
+                    name="amount" 
+                    value="<%= payment.amount %>"
+                    required
+                >
+        </td>
+
+        <td>
+                <button type="submit">Save</button>
+            </form>
+        </td>
+    </tr>
+    <% }) %>
+
+</table>
+
+<br>
+
+<a href="/period/<%= periodId %>">Back</a></div>
+</div>
+
+</body>
+</html>
