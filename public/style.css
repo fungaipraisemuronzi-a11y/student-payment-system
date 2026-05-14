@@ -76,10 +76,11 @@ button:hover {
 input {
     padding: 8px;
     width: 50%;
-    height: 30px;
+    height: 37px;
     margin: 5px 0;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: larger;
 }
 
 /* CARD STYLE */
