@@ -3,6 +3,13 @@ const router = express.Router();
 
 const periodController = require("../controllers/periodController");
 
+router.get("/instructions", periodController.instructionsPage);
+
+/* ROOT REDIRECT */ 
+router.get("/", (req, res) => {
+  res.redirect("/home");
+});
+
 /* HOME PAGE */
 router.get(
   "/home",

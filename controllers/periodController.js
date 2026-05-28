@@ -1,5 +1,9 @@
 const db = require("../database");
 
+exports.instructionsPage = (req, res) => {
+  res.render("instructions");
+};  
+
 /* HOME PAGE */
 exports.homePage = async (req, res) => {
   const result = await db.query(
