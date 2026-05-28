@@ -21,8 +21,17 @@
 <ol>
     <% students.forEach(student => { %>
         <li>
-            <%= student.name %>  -----
-            <a class="a" href="/delete-student/<%= student.id %>">Delete</a><br>
+            <%= student.name %> -----
+
+            <a
+              class="a"
+              href="/delete-student/<%= student.id %>"
+              onclick="return confirm('Are you sure you want to delete this student?')"
+            >
+              Delete
+            </a>
+
+            <br>
         </li>
     <% }) %>
 </ol>
