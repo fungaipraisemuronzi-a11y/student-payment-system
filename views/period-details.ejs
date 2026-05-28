@@ -8,8 +8,9 @@
 
     <div class="container">
         
-<h1><%= period.name %></h1>
+
 <div class="card">
+    <h1 class="h1"><%= period.name %></h1><br>
 <form method="POST" action="/update-target">
     <input type="hidden" name="period_id" value="<%= period.id %>">
    <strong class="tar">Target:</strong>

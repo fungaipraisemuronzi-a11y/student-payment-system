@@ -1,27 +1,43 @@
 body {
     font-family: Arial, sans-serif;
-
-    background: #645a5a;
+    background: #121212;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
 }
 
+.h1 {
+    font-size: 48px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* CENTER SECTIONS */
 .new {
     align-items: center;
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
 }
+
+/* MAIN TITLE */
 #h1 {
     text-align: center;
     font-size: 60px;
+    color: #ffffff;
+    margin-top: 20px;
 }
-/* HEADER / TITLE */
+
+/* HEADINGS */
 h2 {
     text-align: center;
     padding: 15px;
     margin: 0;
+    color: #ffffff;
 }
 
-.tar{
+.tar {
     font-size: 30px;
+    color: hsl(0, 23%, 95%);
 }
 
 /* CONTAINER */
@@ -36,18 +52,29 @@ h2 {
 a {
     text-decoration: none;
     font-size: x-large;
-    color: #007bff;
+    color: #4da3ff;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #82c4ff;
 }
 
 a.a {
     margin-left: 10px;
-    color: red;
+    color: #ff4d4d;
 }
+
+a.a:hover {
+    color: #ff8080;
+}
+
+/* LIST ITEMS */
 li {
     margin: 11px 0;
 }
 
-/* BUTTON */
+/* BUTTONS */
 button {
     background: #007bff;
     color: white;
@@ -56,66 +83,111 @@ button {
     border-radius: 12px;
     cursor: pointer;
     width: 130px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #0056b3;
+    transform: scale(1.03);
 }
 
 /* INPUTS */
 input {
-    padding: 8px;
+    padding: 12px;
     width: 50%;
     height: 37px;
     margin: 5px 0;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 34px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    font-size: 22px;
+    background: #1e1e1e;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: #007bff;
 }
 
 /* CARD STYLE */
 .card {
-    background: white;
+    background: #1e1e1e;
     padding: 15px;
-    margin: 10px ;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    
+    margin: 10px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-/* TABLE (MOBILE FRIENDLY) */
+/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: #1e1e1e;
     border-radius: 10px;
     overflow: hidden;
+    color: white;
 }
 
+/* TABLE HEADERS */
+th {
+    background: #222;
+    color: #00bfff;
+}
+
+/* TABLE CELLS */
 th, td {
-    padding: 10px;
+    padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #333;
+}
+
+/* TABLE ROW HOVER */
+tr:hover {
+    background: #2a2a2a;
 }
 
 /* MOBILE RESPONSIVE */
 @media screen and (max-width: 600px) {
-  body {
-    font-size: 18px; /* slightly larger text for readability */
-  }
 
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
+    body {
+        font-size: 18px;
+    }
 
-  button, a, input, select, textarea {
-    font-size: 1.2rem; /* bigger text for buttons & inputs */
-    padding: 15px 25px; /* more touch-friendly padding */
-  }
+    #h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    button,
+    a,
+    input,
+    select,
+    textarea {
+        font-size: 1.1rem;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
 }
