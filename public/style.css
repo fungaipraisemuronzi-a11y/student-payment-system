@@ -101,8 +101,8 @@ input {
     border-radius: 8px;
     border: 1px solid #333;
     font-size: 22px;
-    background: #1e1e1e;
-    color: white;
+    background: hwb(0 94% 4%);
+    color: rgb(7, 7, 7);
     outline: none;
 }
 
